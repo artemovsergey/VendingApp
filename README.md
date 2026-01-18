@@ -160,6 +160,7 @@ public class AppContextDb : DbContext{
 - tailwind
 - chart.js (графики и диаграммы)
 - toast
+- pwa
 
 # Добавить
 
