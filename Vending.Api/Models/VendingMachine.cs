@@ -5,10 +5,10 @@ public class VendingMachine
     public string Model { get; set; } = string.Empty;
     public string Type { get; set; } = string.Empty;
     public decimal TotalRevenue { get; set; }
-    public string? SerialNumber { get; set; }
-    public string? InventoryNumber { get; set; }
+    public string SerialNumber { get; set; } = string.Empty;
+    public string InventoryNumber { get; set; } = string.Empty;
     public string Manufacturer { get; set; } = string.Empty;
-    public DateTime ManufactureDate { get; set; }
+    public DateOnly ManufactureDate { get; set; }
     public DateTime CommissioningDate { get; set; }
     public DateTime LastCalibrationDate { get; set; }
     public int CalibrationIntervalMonths { get; set; }

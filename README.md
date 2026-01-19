@@ -81,6 +81,8 @@ public int ProductId { get; set; } = string.Empty;
 
 # Check constraint в базе данных через EF
 
+- лучше чистый sql или черзе dbeaver
+
 - через первую миграцию 
 
 AppContext.cs
@@ -119,6 +121,8 @@ public class AppContextDb : DbContext{
 
 # Вопросы
 
+- try catch обработка ошибок нет
+- нет данных для логина и пароля, используем свои данные?
 - что по Git?
 - по поводу десктопного приложения (гибрид, веб-вью). В критериях явно не прописано, в задании написано
 - предложения (только нативный десктоп, только веб, общие критерии зачитывать, специальные - только для определенной платформы)
@@ -169,10 +173,45 @@ public class AppContextDb : DbContext{
 - event для отслеживания событий (возможно, подключить SignalR )
 
 
-# Ресурсы
+# Hash password
 
-- фото для пользователей (заглушка, если фото нет)
+```Csharp
+string hashed = BCrypt.Net.BCrypt.HashPassword("пароль");
+bool valid = BCrypt.Net.BCrypt.Verify("пароль", hashed);
+```
+
+# Пакет
+
+`Microsoft.AspNetCore.Authentication.JwtBearer`
 
 
-# Доп. материалы
-- задание с России
+# Тестирование на Linux в колледже
+
+
+# Jwt for develop only
+
+Это не подойдет для нормальной авторизации, только для проверки точек
+
+- создать appsettings.Development.json
+- настроить в Program
+
+```Csharp
+builder.Services.AddAuthentication().AddJwtBearer();
+builder.Services.AddAuthorization();
+
+...
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+
+
+```
+
+
+- dotnet user-jwts
+- dotnet user-jwts create --name "VendingApp"
+- dotnet user-jwts list
+- dotnet user-jwts print id
+- защитить endpoint атрибутом [Autothize]
+- тестировать через POSTMAN
