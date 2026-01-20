@@ -42,7 +42,7 @@ namespace Vending.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(int id, User user)
+        public async Task<IActionResult> UpdateUser(Guid id, User user)
         {
             if (id != user.Id)
                 return BadRequest();

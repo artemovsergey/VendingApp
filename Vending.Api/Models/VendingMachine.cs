@@ -1,26 +1,38 @@
 public class VendingMachine
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
+    public required string SerialNumber { get; set; } = string.Empty;
+    public required string InventoryNumber { get; set; } = string.Empty;
     public string Location { get; set; } = string.Empty;
     public string Model { get; set; } = string.Empty;
-    public string Type { get; set; } = string.Empty;
-    public decimal TotalRevenue { get; set; }
-    public string SerialNumber { get; set; } = string.Empty;
-    public string InventoryNumber { get; set; } = string.Empty;
-    public string Manufacturer { get; set; } = string.Empty;
-    public DateOnly ManufactureDate { get; set; }
-    public DateTime CommissioningDate { get; set; }
-    public DateTime LastCalibrationDate { get; set; }
-    public int CalibrationIntervalMonths { get; set; }
+    public string ModelType { get; set; } = string.Empty;
+    public decimal TotalIncome { get; set; }
+    public string Company { get; set; } = string.Empty;
+    public DateOnly ManufacterDate { get; set; }
+    public DateOnly InstallDate { get; set; }
+    public DateOnly LastMaintainceDate { get; set; }
+    public int MaintainceMonthInterval { get; set; } = 12;
     public int ResourceHours { get; set; }
-    public DateTime NextMaintenanceDate { get; set; }
-    public int MaintenanceDurationHours { get; set; }
+    public DateOnly NextMainainceDate { get; set; }
+    public int ServiceTime { get; set; }
     public string Status { get; set; } = string.Empty;
-    public string ProductionCountry { get; set; } = string.Empty;
-    public DateTime InventoryDate { get; set; }
+    public string Country { get; set; } = string.Empty;
+    public DateOnly InventoryDate { get; set; }
 
-    // public string LastCalibration { get; set; } = string.Empty;
+    public Guid? MaintainerId { get; set; }
+    public User? Maintainer { get; set; }
+}
 
-    public int UserId { get; set; }
-    public User? User { get; set; }
+public enum ModelType
+{
+    Card = 0,
+    Money = 1,
+    CardAndMoney = 2,
+}
+
+public enum Status
+{
+    Job,
+    NotJob,
+    Service,
 }

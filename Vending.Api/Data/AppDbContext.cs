@@ -8,7 +8,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public required DbSet<Product> Products { get; set; }
     public required DbSet<Sale> Sales { get; set; }
     public required DbSet<User> Users { get; set; }
-    public required DbSet<UserParsing> UsersParsing { get; set; }
     public required DbSet<MaintenanceRecord> MaintenanceRecords { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -16,7 +15,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<User>(e =>
-            e.ToTable(t => t.HasCheckConstraint("checkUserFio", "\"FIO\" != 'test'"))
+            e.ToTable(t => t.HasCheckConstraint("checkUserFio", "\"FullName\" != 'test'"))
         );
 
         // Реализовано ограничение на запрет дублирования по атрибутам серийноного и инвентарного номера

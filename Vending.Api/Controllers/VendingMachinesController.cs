@@ -50,7 +50,7 @@ public class VendingMachinesController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateVendingMachine(int id, VendingMachine machine)
+    public async Task<IActionResult> UpdateVendingMachine(Guid id, VendingMachine machine)
     {
         if (id != machine.Id)
         {

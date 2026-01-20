@@ -22,7 +22,7 @@ public class SalesController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Sale>> GetSale(int id)
+    public async Task<ActionResult<Sale>> GetSale(Guid id)
     {
         var sale = await _context
             .Sales.Include(s => s.VendingMachineId)
@@ -51,7 +51,7 @@ public class SalesController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateSale(int id, Sale sale)
+    public async Task<IActionResult> UpdateSale(Guid id, Sale sale)
     {
         if (id != sale.Id)
             return BadRequest();

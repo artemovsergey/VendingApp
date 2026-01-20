@@ -12,7 +12,7 @@ public class AuthController(AppDbContext db) : ControllerBase
     public IActionResult Auth(LoginRequest request)
     {
         var user = db
-            .UsersParsing.Where(u => u.Login == request.Login && u.Password == u.Password)
+            .Users.Where(u => u.Login == request.Login && u.Password == u.Password)
             .FirstOrDefault();
 
         return user != null ? Ok(user) : NotFound("Неправильный логин или пароль");

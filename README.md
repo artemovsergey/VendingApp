@@ -208,10 +208,17 @@ app.UseAuthorization();
 
 ```
 
-
 - dotnet user-jwts
 - dotnet user-jwts create --name "VendingApp"
 - dotnet user-jwts list
 - dotnet user-jwts print id
 - защитить endpoint атрибутом [Autothize]
 - тестировать через POSTMAN
+
+
+# Import 
+
+- в Excel файле сделать автоподбор ширины столбцов
+- значение по умолчанию в postgres для типа uuid: `gen_random_uuid()`
+- методика вставки: сначала создать n - записей, потом выделить все строки без столбца Id и потом `Ctrl + Shift + V` и сохранить
+- перезайти в таблицу, чтобы увидеть генерацию uuid для поля Id

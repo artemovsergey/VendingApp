@@ -31,19 +31,49 @@ var options = new JsonSerializerOptions
 };
 
 app.MapGet(
-    "/parsing",
-    async () =>
+    "/users",
+    async (AppDbContext db) =>
     {
-        List<UserParsing> users = new();
+        List<User> users = new();
         for (int i = 1; i < 20; i++)
         {
-            var data = await File.ReadAllTextAsync($"users/{i}.json");
-            var user = JsonSerializer.Deserialize<UserParsing>(data, options);
+            var data = await File.ReadAllTextAsync($"resources/users/users/{i}.json");
+            var user = JsonSerializer.Deserialize<User>(data, options);
             Console.WriteLine(user!.FullName);
             users.Add(user);
         }
 
+        try
+        {
+            await db.Users.AddRangeAsync(users);
+            await db.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            System.Console.WriteLine($"Ошибка сохранения: {ex.InnerException!.Message}");
+        }
+
         return users;
+    }
+);
+
+app.MapGet(
+    "/products",
+    async (AppDbContext db) =>
+    {
+        var data = await File.ReadAllTextAsync("resources/products/products.json");
+        var products = JsonSerializer.Deserialize<Product[]>(data, options);
+        System.Console.WriteLine(products?.Count());
+
+        try
+        {
+            await db.Products.AddRangeAsync(products!);
+            await db.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            System.Console.WriteLine($"Ошибка сохранения: {ex.InnerException!.Message}");
+        }
     }
 );
 

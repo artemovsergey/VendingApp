@@ -22,7 +22,7 @@ public class MaintenanceController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<MaintenanceRecord>> GetMaintenanceRecord(int id)
+    public async Task<ActionResult<MaintenanceRecord>> GetMaintenanceRecord(Guid id)
     {
         var record = await _context.MaintenanceRecords.FirstOrDefaultAsync(m => m.Id == id);
 
@@ -45,7 +45,7 @@ public class MaintenanceController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateMaintenance(int id, MaintenanceRecord record)
+    public async Task<IActionResult> UpdateMaintenance(Guid id, MaintenanceRecord record)
     {
         if (id != record.Id)
             return BadRequest();
