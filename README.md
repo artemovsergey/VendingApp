@@ -278,3 +278,20 @@ DELETE /vendingMachines
 GET /vendingMachines/{id}/link/{modemId}
 GET /vendingMachines/{id}/unlink/{modemId}
 
+# Https
+
+- устновить на windows/linux mkcert
+- mkcert install
+- mkcert localhot
+
+# Frontend
+
+- npx create-vite@latest
+- выбрать react и typescript
+- удалить страндартные css стили из App.css и index.css
+- проверить работу App.tsx
+- установить tailwindcss
+- настроить в vite.config
+- подключить стили tailwind
+- проверить работу
+- сделать разметку на компонентах через tailwind

@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+html,body{
+    font-size: 1.1rem;
+}
+
+.app{
+    display: flex;
+    flex-direction:  column;
+    height: 100vh;
+}
+
+.header{
+    padding: 1rem;
+    display: flex;
+    /* margin: 1rem; */
+    /* border: 1px solid; */
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    flex: 1;
+}
+
+.aside{
+
+    padding: 1rem;
+    /* margin: 1rem; */
+    /* border: 1px solid;
+    border-radius: 2rem; */
+    display: flex;
+    flex-direction:  column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: blue; */
+    /* width: 300px; */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.87);
+    color:white;
+
+    ul{
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    li:hover{
+        font-weight:700;
+        cursor: pointer;
+    }
+}
+
+.home{
+    /* padding: 1px; */
+    flex: 1;
+    /* margin: 1rem;
+    border: 1px solid #b7b7b7;
+    border-radius: 2rem; */
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #b7b7b742; */
+
+    h1{
+        margin: 1rem;
+        font-weight: 700;
+    }
+}
+
+.blocks{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+section{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aquamarine; */
+    border: 1px solid;
+    /* border-radius: 2rem; */
+    height: fit-content;
+
+}
