@@ -12,7 +12,7 @@ using Vending.Api.Data;
 namespace Vending.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260120184323_Init")]
+    [Migration("20260121054427_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace Vending.Api.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.2")
+                .HasAnnotation("ProductVersion", "9.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);

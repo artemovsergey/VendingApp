@@ -37,7 +37,7 @@ app.MapGet(
         List<User> users = new();
         for (int i = 1; i < 20; i++)
         {
-            var data = await File.ReadAllTextAsync($"resources/users/users/{i}.json");
+            var data = await File.ReadAllTextAsync($"resources/users/{i}.json");
             var user = JsonSerializer.Deserialize<User>(data, options);
             Console.WriteLine(user!.FullName);
             users.Add(user);

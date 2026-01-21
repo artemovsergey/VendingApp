@@ -255,3 +255,26 @@ app.UseAuthorization();
 
 - GET /vendingMachines
 - GET /sales
+
+---
+
+## Модель Администрирование
+
+Фронтенд: 
+- меню Торговые автоматы, Компании, Пользователи, Модемы, Дополнительно
+- режим отображения: плитка и таблица
+- фильтр по имени
+- выбор количества
+- пагинация
+- экспорт в csv, pdf, html
+- выделение цветом нечетных строк таблицы
+
+
+Бекенд:
+GET /vendingMachines
+GET /vendingMachines/{id}
+PUT /vendingMachines
+DELETE /vendingMachines
+GET /vendingMachines/{id}/link/{modemId}
+GET /vendingMachines/{id}/unlink/{modemId}
+
