@@ -295,3 +295,9 @@ GET /vendingMachines/{id}/unlink/{modemId}
 - подключить стили tailwind
 - проверить работу
 - сделать разметку на компонентах через tailwind
+
+
+# Router-dom
+
+- для react 19
+- npm install react-router-dom@latest -force

@@ -1,36 +1,23 @@
-import { Header } from "./components/Header"
-import { Home } from "./components/Home"
-import { Logo } from "./components/Logo"
-import { Main } from "./components/Main"
-import { Module } from "./components/Module"
-import { Profile } from "./components/Profile"
-import { Sidebar } from "./components/Sidebar"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home";
+import { Monitoring } from "./components/Monitoring";
+import { Login } from "./components/Login";
+import { Layout } from "./components/Layout";
+import { NotFound } from "./components/NotFound";
 
 function App() {
-
   return (
-    <div className="app">
-      <Header>
-        <Logo />
-        <Profile />
-      </Header>
-
-      <Main>
-        <Sidebar />
-        <Home>
-          <h1> Личный кабинет</h1>
-          <div className="blocks">
-            <Module title="Эффективность сети" />
-            <Module title="Состояние сети" />
-            <Module title="Сводка" />
-            <Module title="Динамика продаж" />
-            <Module title="Новости" />
-          </div>
-        </Home>
-      </Main>
-
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="monitoring" element={<Monitoring />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

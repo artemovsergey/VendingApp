@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export const Sidebar = () => {
 
@@ -18,10 +19,9 @@ export const Sidebar = () => {
 
             {!shortMenu &&
                 <ul>
-                    <li className="flex gap-1">
-                        <span>Главная</span>
-                    </li>
-                    <li>Монитор ТА</li>
+                    {/* <li>Монитор ТА</li> */}
+                    <Link to="/">Главная</Link>
+                    <Link to="/monitoring">Монитор ТА</Link>
                     <li>Детальные отчеты</li>
                     <li> Учет ТМЦ</li>
                     <li> Администрирование</li>
