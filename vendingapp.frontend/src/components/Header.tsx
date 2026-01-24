@@ -1,5 +1,7 @@
 export const Header = (props: { children: any }) => {
     return (
-        <header className="header"> {props.children} </header>
+        <header className="p-2 flex flex-row justify-between items-center">
+            {props.children}
+        </header>
     )
 }

@@ -12,8 +12,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAuthentication().AddJwtBearer();
 builder.Services.AddAuthorization();
+builder.Services.AddCors();
 
 var app = builder.Build();
+
+app.UseCors(o => o.AllowAnyOrigin().AllowAnyHeader());
 
 app.UseAuthentication();
 app.UseAuthorization();

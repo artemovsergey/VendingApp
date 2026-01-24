@@ -7,7 +7,7 @@ export const Sidebar = () => {
 
     return (
 
-        <aside className="aside w-[30]">
+        <aside className="flex flex-col gap-2 bg-black text-white h-screen p-3 w-[30]">
 
             <img className="bg-white hover:bg-orange-500 self-end rounded-full"
                 src="icons/angle-right.png"
@@ -18,7 +18,7 @@ export const Sidebar = () => {
 
 
             {!shortMenu &&
-                <ul>
+                <ul className="p-3 flex flex-col gap-1">
                     {/* <li>Монитор ТА</li> */}
                     <Link to="/">Главная</Link>
                     <Link to="/monitoring">Монитор ТА</Link>

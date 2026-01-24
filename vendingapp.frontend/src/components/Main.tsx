@@ -1,5 +1,5 @@
 export const Main = (props: { children: React.ReactNode }) => {
     return (
-        <main className="main"> {props.children} </main>
+        <main className="flex"> {props.children} </main>
     )
 }

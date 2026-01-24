@@ -1,125 +1,39 @@
-# Замечания
+# Настройка
 
-- при формировании модели EF - первичный ключ называй `Id`, а внешний называешь `Entity + Id` (ProductId, UserId). Это такие соглашения в EF
-- лучше и первичный и внешний ключи сделать int, а строковые ключи, которые уже есть в данных просто сделать уникальными и подписать `inventoryNumber`
+## API
 
+- смотрит на версию .net
+- пакет ` <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />` убираем
 
-# Рефакторинг
-
-- конструкцию 
-
-```Csharp
-namespace Name {
-
-}
-```
-
-можно заменить на `namespace Name;`
-
-
-- используй первичный конструктор вместо обычного
-
-вместо
-
-```Csharp
-    private readonly AppDbContext _context;
-
-    public MaintenanceController(AppDbContext context)
-    {
-        _context = context;
-    }
-```
-
-на 
-
-```Csharp
-   public class ItemsController(TodoContext todoContext) : ControllerBase
-    {
-    }
-```
-
-- без асинхронности код будет короче, но если понимаешь как писать методы асихронные, то используй
-
-- пакет ` <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />` удаляй, лучше только Swagger
-
+- установка Swagger
 ```xml
   <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.1.0"/>
   <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.0" />
-```
-
--  возможно полезен будет пакет для подписывания endpoins в swagger. Со временем их становиться больше и так будет легче понять
-
-```xml
-<PackageReference Include="Swashbuckle.AspNetCore.Annotation" Version="10.1.0" />
+  <PackageReference Include="Swashbuckle.AspNetCore.Annotation" Version="10.1.0" />
 ```
 
 - подключаем `CORS` в API сразу. Разрешаем origin, methods, header
-
-
-- в моделях строковое свойство, чтобы не было преупреждений, должно иметь значение по умолчанию 
-
-```Csharp
-public int ProductId { get; set; } = string.Empty;
-```
-Примечание: тип внешнего ключа должен совпадать с типом первичного ключа в другой таблице
-
-
 - используй команду `dotnet watch` - это `dotnet run` только видит изменения не перезагружая сервер
+
 
 # Импорт данных из Excel в Dbeaver
 
 - для импорта данных надо подготовить данные в Excel по столбцам в строгом соответствии так, как они идут в базе (перемещение столбцов зажать Shift и навести между столбцами)
 - проставить в Excel внешние ключи вместо явных строк
 - вставить в Dbeaver командой `Ctrl + Shift + V` и не забыть потом сохранить `Ctrl + S`
+- смотреть в данных на первичные ключи: int Id или Guid Id
 
 # Восстановление базы данных с данными
 
 - после того, как данные будут импортированые сделай dump с данными средствами Dbeaver (База данных - Задачи - Создать задачу)
 - в параметрах указать формат Plain, кодировка UTF-8 и поставить Insert Into (первый чекбокс). Это надо для тебя, хотя в задании и критериях этого не требуется
-
 - в Dbeaver сделать полную ERD-диаграмму (ее потом используешь в презентации)
-
-# Check constraint в базе данных через EF
-
-- лучше чистый sql или черзе dbeaver
-
-- через первую миграцию 
-
-AppContext.cs
-```Csharp
-
-public class AppContextDb : DbContext{
-
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-
-        modelBuilder.Entity<User>(e =>
-            e.ToTable(t => t.HasCheckConstraint("checkUserFio", "\"FIO\" != 'test'"))
-        );
-    }
-
-}
-```
-Замечание: ограничения создаются только при первой миграции, поэтому их надо создавать сразу, а не после того, как данные импортированы (смысл создания dump базы с данными, чтобы можно было легко восстановить все)
-
-- можно потом на готовой базе данных дописать ограничения на чистом sql
-
-
-# Git
-
+- лучше constraint через чистый sql или через dbeaver
 - коммиты ОБЯЗАТЕЛЬНО делать осмысленными (feature: новая функция, fix: исправил проблему)
 - заполнять и оформлять по структуре README
+ - добавил enum в моделях, в базе они будут храниться как int. При выводе в API можно настроить как числом, так и строкой. При таком подходе в коде становиться легче ориентироваться
 
-# Enum
-
- - добавил enum в моделях, в базе они будут храниться как int. При выводе в API можно настроить как числом, так и строкой
-
-
-
-
-# Вопросы
+# Вопросы и предложения
 
 - можно доабвить в ресурсы цветовую палитру
 - надо добавить данные по инкассации
@@ -129,148 +43,27 @@ public class AppContextDb : DbContext{
 - что по Git?
 - по поводу десктопного приложения (гибрид, веб-вью). В критериях явно не прописано, в задании написано
 - предложения (только нативный десктоп, только веб, общие критерии зачитывать, специальные - только для определенной платформы)
-- если запись экрана, то интернет будет?
 - использовать только протокол https, или надо самоподписанный сертификат на localhost
-- мало баллов за мобильное приложение, его почти обычно не делают
-- в создании коллекции postman сказано указать enppoint обновления токена, но в задании и критериях нет про обновление токена
-
-
-# Приоритет
-
-- drag and drop
-- jwt мало
-
-# Библиотеки
-
-## Бекенд
-
-- jwt
-
-## Фронтенд
-
-- пагинация
-- отображение: плиткой и таблицей
-- dropdown
-- sidebar
-- jwt через localstorage
-- export в csv, pdf, html
-- валидация полей при создании (можно на нативном hmtl, можно условием отлючать кнопку и подсвечивать border)
-- сортировка и фильтрация на фронтенде (на бекенде не реализуем)
-- toast-уведомления в углу
-- мультиязычность
-- https (генерация самоподписанного сертификата)
-- календарь
-
-- react
-- react-dom
-- react-router
-- tailwind
-- chart.js (графики и диаграммы)
-- toast
-- pwa
-
-# Добавить
-
-- логин, пароль, фото
-- реализуйте API, которое будет генерировать состояние связи, загрузку, денежные средства и статусы ТА для эмуляции работы
-- event для отслеживания событий (возможно, подключить SignalR )
-
-
-# Hash password
+- тестирование на Linux в колледже
+- точки на minimalAPI
+- в Excel файле сделать автоподбор ширины столбцов
+- значение по умолчанию в postgres для типа uuid: `gen_random_uuid()`
+- методика вставки: сначала создать n - записей, потом выделить все строки без столбца Id и потом `Ctrl + Shift + V` и сохранить
+- перезайти в таблицу, чтобы увидеть генерацию uuid для поля Id
+- hash password
 
 ```Csharp
 string hashed = BCrypt.Net.BCrypt.HashPassword("пароль");
 bool valid = BCrypt.Net.BCrypt.Verify("пароль", hashed);
 ```
 
-# Пакет
-
-`Microsoft.AspNetCore.Authentication.JwtBearer`
-
-
-# Тестирование на Linux в колледже
-
-
-# Jwt for develop only
-
-Это не подойдет для нормальной авторизации, только для проверки точек
-
-- создать appsettings.Development.json
-- настроить в Program
-
-```Csharp
-builder.Services.AddAuthentication().AddJwtBearer();
-builder.Services.AddAuthorization();
-
-...
-
-app.UseAuthentication();
-app.UseAuthorization();
-
-
-
-```
-
-- dotnet user-jwts
-- dotnet user-jwts create --name "VendingApp"
-- dotnet user-jwts list
-- dotnet user-jwts print id
-- защитить endpoint атрибутом [Autothize]
-- тестировать через POSTMAN
-
-
-# Import 
-
-- в Excel файле сделать автоподбор ширины столбцов
-- значение по умолчанию в postgres для типа uuid: `gen_random_uuid()`
-- методика вставки: сначала создать n - записей, потом выделить все строки без столбца Id и потом `Ctrl + Shift + V` и сохранить
-- перезайти в таблицу, чтобы увидеть генерацию uuid для поля Id
-
-# Модули
-
-## Главная
-
-Библиотеки: графики, хеширование, dnd, sidebar, dropdown
-
-Фронтенд
-
-- pwa: настройка vite-config
-- сверстать макет с помощью tailwind
-- компонент по '/' - Главная
-- получем фото по base64 строке
-- профиль через dropdown
-- sidebar c меню
-- sidebar скрывается
-- каждое меню раскрывается
-- компоненты 5 блоков
-- блоки можно скрывать
-- блоки можно перетаскивать
-
-
-Бекеда
 - авторизация по логин и паролю без jwt: создать AuthController и модель Dto с Login и Password, добавить в модель User новые поля, провести миграцию
-- endpoint авторизации с проверкой
-- endpoint регистрации через метод создания пользователя 
-- хеширование пароля
+- endpoint авторизации с проверкой хеша
+- endpoint регистрации через метод создания пользователя с хешированием
+- установить на windows/linux `mkcert`
+- mkcert install
+- mkcert localhost
 
-- GET /vendingMachines
-- GET /sales
-
----
-
-## Модель Администрирование
-
-Фронтенд: 
-- меню Торговые автоматы, Компании, Пользователи, Модемы, Дополнительно
-- режим отображения: плитка и таблица
-- фильтр по имени
-- выбор количества
-- пагинация
-- экспорт в csv, pdf, html
-- выделение цветом нечетных строк таблицы
-
-
-Бекенд:
 GET /vendingMachines
 GET /vendingMachines/{id}
 PUT /vendingMachines
@@ -278,26 +71,64 @@ DELETE /vendingMachines
 GET /vendingMachines/{id}/link/{modemId}
 GET /vendingMachines/{id}/unlink/{modemId}
 
-# Https
-
-- устновить на windows/linux mkcert
-- mkcert install
-- mkcert localhot
-
-# Frontend
-
 - npx create-vite@latest
-- выбрать react и typescript
-- удалить страндартные css стили из App.css и index.css
+- выбрать react и typescript (может и без ts)
+- удалить стандартные css стили из App.css и index.css
 - проверить работу App.tsx
 - установить tailwindcss
 - настроить в vite.config
 - подключить стили tailwind
 - проверить работу
 - сделать разметку на компонентах через tailwind
+- для react 19: `npm install react-router-dom@latest -force`, если не установиться
 
 
-# Router-dom
+- pwa
 
-- для react 19
-- npm install react-router-dom@latest -force
+```ts
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      devOptions: {
+        enabled: true
+      },
+      manifest: {
+        name: "Мое Приложение",
+        short_name: "Приложение",
+        description: "Мое React PWA",
+        start_url: "/",
+        display: "standalone",
+        background_color: "#ffffff",
+        theme_color: "#000000",
+        icons: [
+          {
+            "src": "vite.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "vite.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+        ]
+      }
+    })
+  ],
+  server: {
+    https: {
+      cert: "localhost.pem",
+      key: "localhost-key.pem",
+    },
+    host: '0.0.0.0',
+    port: 3000,
+  },
+})
+```
+
+- продублировать модели в бекента в интерфейсы ts для удобства

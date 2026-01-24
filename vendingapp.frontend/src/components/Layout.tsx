@@ -8,7 +8,7 @@ import { Main } from "./Main";
 export const Layout = () => {
   return (
     <>
-      <div className="app">
+      <div className="flex flex-col">
         <Header>
           <Logo />
           <Profile />
