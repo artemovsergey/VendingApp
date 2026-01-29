@@ -1,0 +1,492 @@
+[
+  {
+    "id": "224cdcde-36ee-45da-9ae5-2588df8f96fb",
+    "name": "Грушевый латте",
+    "price": 68.57,
+    "min_stock": 20,
+    "vending_machine_id": "dc92a945-80cf-4c86-8927-97026c6e82da",
+    "description": "Имеет мягкий вкус с лёгкой фруктовой сладостью.",
+    "quantity_available": 33,
+    "sales_trend": 7.37
+  },
+  {
+    "id": "6392ebd8-2359-40df-a4f8-fb02fc2932d2",
+    "name": "Персиковый американо",
+    "price": 175.44,
+    "min_stock": 18,
+    "vending_machine_id": "dc92a945-80cf-4c86-8927-97026c6e82da",
+    "description": "Имеет фруктовый вкус с нежным ароматом персика.",
+    "quantity_available": 72,
+    "sales_trend": 4.92
+  },
+  {
+    "id": "514fef90-eb36-454f-968c-a02b1dbcf7d8",
+    "name": "Облепиховый латте",
+    "price": 81.2,
+    "min_stock": 5,
+    "vending_machine_id": "dc92a945-80cf-4c86-8927-97026c6e82da",
+    "description": "Имеет кисло-сладкий вкус с ягодным акцентом.",
+    "quantity_available": 66,
+    "sales_trend": 7.2
+  },
+  {
+    "id": "c3737840-6332-4bc6-b5bc-80f92f074f58",
+    "name": "Кремовый латте",
+    "price": 124.51,
+    "min_stock": 6,
+    "vending_machine_id": "dc92a945-80cf-4c86-8927-97026c6e82da",
+    "description": "Имеет мягкий, сливочный вкус.",
+    "quantity_available": 49,
+    "sales_trend": 4.13
+  },
+  {
+    "id": "d27ea808-ee98-4fd0-b867-b5a4a0576c68",
+    "name": "Карамельный макиато",
+    "price": 162.23,
+    "min_stock": 13,
+    "vending_machine_id": "dc92a945-80cf-4c86-8927-97026c6e82da",
+    "description": "Имеет вкус с нотками тёплой карамели.",
+    "quantity_available": 28,
+    "sales_trend": 7.08
+  },
+  {
+    "id": "69b065b6-8e39-44ba-b3a1-f5ca5cf01d57",
+    "name": "Крем-брюле латте",
+    "price": 63.99,
+    "min_stock": 11,
+    "vending_machine_id": "7ed68dd4-ef8b-4124-9084-bc16ee8f10d3",
+    "description": "Имеет сливочно-карамельный вкус десерта.",
+    "quantity_available": 74,
+    "sales_trend": 6.94
+  },
+  {
+    "id": "5144585b-9434-4fc9-89bf-b88784ea791d",
+    "name": "Пряный латте",
+    "price": 70.1,
+    "min_stock": 12,
+    "vending_machine_id": "7ed68dd4-ef8b-4124-9084-bc16ee8f10d3",
+    "description": "Имеет яркий вкус с добавлением специй.",
+    "quantity_available": 47,
+    "sales_trend": 1.87
+  },
+  {
+    "id": "db33e8df-278c-472c-a45a-c3ddb7374b3a",
+    "name": "Тростниковый американо",
+    "price": 72.23,
+    "min_stock": 19,
+    "vending_machine_id": "7ed68dd4-ef8b-4124-9084-bc16ee8f10d3",
+    "description": "Имеет вкус с сахарной сладостью.",
+    "quantity_available": 26,
+    "sales_trend": 2.42
+  },
+  {
+    "id": "50c6dd4f-70f2-4ec1-a80c-0fc0069f08c2",
+    "name": "Двойной эспрессо",
+    "price": 192.14,
+    "min_stock": 7,
+    "vending_machine_id": "7ed68dd4-ef8b-4124-9084-bc16ee8f10d3",
+    "description": "Имеет крепкий и насыщенный вкус кофе.",
+    "quantity_available": 48,
+    "sales_trend": 3.25
+  },
+  {
+    "id": "8aba3e58-49f7-44f0-9f7b-f8ad1cd570dc",
+    "name": "Мятный раф",
+    "price": 195.03,
+    "min_stock": 20,
+    "vending_machine_id": "0a9a91bf-0fcc-44ac-b3c2-88a33411413a",
+    "description": "Имеет освежающий вкус с мятным ароматом.",
+    "quantity_available": 47,
+    "sales_trend": 1.5
+  },
+  {
+    "id": "8b889b5b-7567-45fa-97c9-09e56237d033",
+    "name": "Цитрусовый эспрессо",
+    "price": 175.75,
+    "min_stock": 18,
+    "vending_machine_id": "0a9a91bf-0fcc-44ac-b3c2-88a33411413a",
+    "description": "Имеет освежающий вкус с цитрусовой кислинкой.",
+    "quantity_available": 83,
+    "sales_trend": 8.94
+  },
+  {
+    "id": "341529cf-dffb-4813-9c77-76f39f4445c7",
+    "name": "Бодрящий эспрессо",
+    "price": 181.49,
+    "min_stock": 18,
+    "vending_machine_id": "0a9a91bf-0fcc-44ac-b3c2-88a33411413a",
+    "description": "Имеет яркий и насыщенный вкус для энергии.",
+    "quantity_available": 93,
+    "sales_trend": 1.13
+  },
+  {
+    "id": "64ad7e60-59c1-4a36-9e09-4f0038143720",
+    "name": "Эспрессо с лаймом",
+    "price": 166.78,
+    "min_stock": 6,
+    "vending_machine_id": "0a9a91bf-0fcc-44ac-b3c2-88a33411413a",
+    "description": "Имеет кисло-свежий вкус с лаймовыми нотками.",
+    "quantity_available": 76,
+    "sales_trend": 7.81
+  },
+  {
+    "id": "e9aa2886-0ba0-4b7a-96dc-078855f99872",
+    "name": "Медовый раф",
+    "price": 139.55,
+    "min_stock": 17,
+    "vending_machine_id": "89c05e76-6b7e-4d72-b97c-62ecb96b1370",
+    "description": "Имеет натуральный вкус с мёдовой сладостью.",
+    "quantity_available": 79,
+    "sales_trend": 8.87
+  },
+  {
+    "id": "2d79e75e-c6b8-4138-8c0c-403325bf6944",
+    "name": "Молочный капучино",
+    "price": 93.59,
+    "min_stock": 14,
+    "vending_machine_id": "89c05e76-6b7e-4d72-b97c-62ecb96b1370",
+    "description": "Имеет мягкий и сливочный вкус.",
+    "quantity_available": 11,
+    "sales_trend": 1.89
+  },
+  {
+    "id": "8a12f87f-7b45-4a03-bc7a-69e5fbccbc5a",
+    "name": "Терпкий капучино",
+    "price": 81.74,
+    "min_stock": 15,
+    "vending_machine_id": "89c05e76-6b7e-4d72-b97c-62ecb96b1370",
+    "description": "Имеет насыщенный вкус с яркой кислинкой.",
+    "quantity_available": 72,
+    "sales_trend": 3.6
+  },
+  {
+    "id": "afeeb9f2-2b7c-45c9-a063-b4a0d44dbb48",
+    "name": "Кофе с маршмеллоу",
+    "price": 157.89,
+    "min_stock": 5,
+    "vending_machine_id": "89c05e76-6b7e-4d72-b97c-62ecb96b1370",
+    "description": "Имеет сладкий вкус с нотками ванили и маршмеллоу.",
+    "quantity_available": 43,
+    "sales_trend": 2.93
+  },
+  {
+    "id": "e4cb82db-3355-4fef-b410-fab99949cb04",
+    "name": "Черничный латте",
+    "price": 37.4,
+    "min_stock": 5,
+    "vending_machine_id": "89c05e76-6b7e-4d72-b97c-62ecb96b1370",
+    "description": "Имеет ягодно-фруктовый вкус с черничной кислинкой.",
+    "quantity_available": 88,
+    "sales_trend": 8.39
+  },
+  {
+    "id": "5f1e4f5c-553b-4053-a26e-ed899ccfa7e0",
+    "name": "Кофе с коньяком",
+    "price": 89.18,
+    "min_stock": 9,
+    "vending_machine_id": "53e2ec2e-d407-4e9a-a1d9-5a9501e81ede",
+    "description": "Имеет глубокий вкус с алкогольной нотой.",
+    "quantity_available": 48,
+    "sales_trend": 5.52
+  },
+  {
+    "id": "1dd986b1-4f40-4db2-9dfe-5c1565cfd754",
+    "name": "Ореховый американо",
+    "price": 143.78,
+    "min_stock": 13,
+    "vending_machine_id": "53e2ec2e-d407-4e9a-a1d9-5a9501e81ede",
+    "description": "Имеет мягкий кофейный вкус с ореховым послевкусием.",
+    "quantity_available": 89,
+    "sales_trend": 8.9
+  },
+  {
+    "id": "396555b4-40d3-4917-9af1-2f43ba499d89",
+    "name": "Кофе с розмарином",
+    "price": 32.43,
+    "min_stock": 14,
+    "vending_machine_id": "53e2ec2e-d407-4e9a-a1d9-5a9501e81ede",
+    "description": "Имеет пряный вкус с лёгкой горчинкой розмарина.",
+    "quantity_available": 39,
+    "sales_trend": 4.94
+  },
+  {
+    "id": "bb2999ed-c6ae-4172-9343-60b1d1b7bd1f",
+    "name": "Тыквенный спайс латте",
+    "price": 155.87,
+    "min_stock": 17,
+    "vending_machine_id": "53e2ec2e-d407-4e9a-a1d9-5a9501e81ede",
+    "description": "Имеет вкус с ароматом тыквы и специй.",
+    "quantity_available": 14,
+    "sales_trend": 3.25
+  },
+  {
+    "id": "eda4394b-d645-4d19-9117-ffb79eeb3669",
+    "name": "Классический эспрессо",
+    "price": 111.73,
+    "min_stock": 5,
+    "vending_machine_id": "53e2ec2e-d407-4e9a-a1d9-5a9501e81ede",
+    "description": "Имеет традиционный сбалансированный вкус кофе.",
+    "quantity_available": 81,
+    "sales_trend": 2.07
+  },
+  {
+    "id": "1570c922-d706-46a4-bc41-329483be4822",
+    "name": "Кленовый флет уайт",
+    "price": 170.08,
+    "min_stock": 7,
+    "vending_machine_id": "e1d62e6a-5427-4dda-8209-bb584bfbc9e5",
+    "description": "Имеет сладкий вкус с ароматом кленового сиропа.",
+    "quantity_available": 96,
+    "sales_trend": 5.16
+  },
+  {
+    "id": "2efef2da-8a8c-4d2f-bfea-0816d6b67303",
+    "name": "Фундуковый мокко",
+    "price": 199.83,
+    "min_stock": 9,
+    "vending_machine_id": "e1d62e6a-5427-4dda-8209-bb584bfbc9e5",
+    "description": "Имеет вкус с ароматом жареного фундука.",
+    "quantity_available": 92,
+    "sales_trend": 8.03
+  },
+  {
+    "id": "5da14b84-a68f-488d-9e1e-e1ca615fb0d8",
+    "name": "Кофе с карамелью",
+    "price": 172.86,
+    "min_stock": 13,
+    "vending_machine_id": "e1d62e6a-5427-4dda-8209-bb584bfbc9e5",
+    "description": "Имеет мягкий сладкий вкус карамели.",
+    "quantity_available": 10,
+    "sales_trend": 7.87
+  },
+  {
+    "id": "acdfa29d-f642-4ba7-939a-0c8262ff7c41",
+    "name": "Шоколадный капучино",
+    "price": 49.53,
+    "min_stock": 14,
+    "vending_machine_id": "e1d62e6a-5427-4dda-8209-bb584bfbc9e5",
+    "description": "Имеет глубокий вкус с шоколадным оттенком.",
+    "quantity_available": 87,
+    "sales_trend": 5.3
+  },
+  {
+    "id": "65c81bfc-a283-4a14-a8f7-60800963d5b7",
+    "name": "Кофе на овсяном молоке",
+    "price": 123.66,
+    "min_stock": 12,
+    "vending_machine_id": "e1d62e6a-5427-4dda-8209-bb584bfbc9e5",
+    "description": "Имеет вкус с молочной основой и лёгким ореховым оттенком.",
+    "quantity_available": 79,
+    "sales_trend": 7.68
+  },
+  {
+    "id": "a90eaff4-e8bd-400f-a4b9-63cc6e0bcb54",
+    "name": "Арахисовый мокко",
+    "price": 134.51,
+    "min_stock": 8,
+    "vending_machine_id": "e1d62e6a-5427-4dda-8209-bb584bfbc9e5",
+    "description": "Имеет вкус с насыщенными нотками арахиса.",
+    "quantity_available": 41,
+    "sales_trend": 8.45
+  },
+  {
+    "id": "075ac323-7649-44e8-bbff-60cbda965c47",
+    "name": "Фисташковый мокко",
+    "price": 133.4,
+    "min_stock": 18,
+    "vending_machine_id": "166c8a3f-a211-4d25-b2d4-a5b0b5f067d5",
+    "description": "Имеет ореховый оттенок с нежной фисташковой ноткой.",
+    "quantity_available": 81,
+    "sales_trend": 5.55
+  },
+  {
+    "id": "e7cf5f27-b23e-484a-8a9f-6dc67503a89a",
+    "name": "Лавандовый раф",
+    "price": 175.68,
+    "min_stock": 12,
+    "vending_machine_id": "166c8a3f-a211-4d25-b2d4-a5b0b5f067d5",
+    "description": "Имеет мягкий цветочный аромат с лёгкими нотами лаванды.",
+    "quantity_available": 58,
+    "sales_trend": 7.81
+  },
+  {
+    "id": "f015385b-be00-4ec9-acbf-2fcf38b9d7fd",
+    "name": "Французский ванильный латте",
+    "price": 154.46,
+    "min_stock": 12,
+    "vending_machine_id": "166c8a3f-a211-4d25-b2d4-a5b0b5f067d5",
+    "description": "Имеет нежный вкус с ароматом ванили.",
+    "quantity_available": 73,
+    "sales_trend": 9.28
+  },
+  {
+    "id": "3dd6269e-af5b-451b-bd3b-552b73c1751d",
+    "name": "Мятно-шоколадный макиато",
+    "price": 69.03,
+    "min_stock": 5,
+    "vending_machine_id": "166c8a3f-a211-4d25-b2d4-a5b0b5f067d5",
+    "description": "Имеет глубокий вкус с шоколадным оттенком.",
+    "quantity_available": 29,
+    "sales_trend": 9.02
+  },
+  {
+    "id": "31995494-84d0-4cc8-8765-df869685e234",
+    "name": "Ромовый флет уайт",
+    "price": 75.77,
+    "min_stock": 17,
+    "vending_machine_id": "166c8a3f-a211-4d25-b2d4-a5b0b5f067d5",
+    "description": "Имеет сладкий вкус с лёгкой алкогольной ноткой рома.",
+    "quantity_available": 96,
+    "sales_trend": 7.98
+  },
+  {
+    "id": "ad2493e7-e1b8-4811-bd6c-5e38edeb0f99",
+    "name": "Банановый капучино",
+    "price": 190.44,
+    "min_stock": 12,
+    "vending_machine_id": "166c8a3f-a211-4d25-b2d4-a5b0b5f067d5",
+    "description": "Имеет сладкий вкус с банановыми нотками.",
+    "quantity_available": 88,
+    "sales_trend": 4.59
+  },
+  {
+    "id": "f3dc17fc-f9fe-4beb-93f4-a27a02adb152",
+    "name": "Раф с халвой",
+    "price": 121.71,
+    "min_stock": 15,
+    "vending_machine_id": "4daae871-71ac-44da-8b58-dcf1a2ae907a",
+    "description": "Имеет вкус с орехово-сладкой ноткой халвы.",
+    "quantity_available": 69,
+    "sales_trend": 5.76
+  },
+  {
+    "id": "fa4180fd-2756-4f01-aaa0-aa051c939b1a",
+    "name": "Медово-имбирный макиато",
+    "price": 107.5,
+    "min_stock": 17,
+    "vending_machine_id": "4daae871-71ac-44da-8b58-dcf1a2ae907a",
+    "description": "Имеет острый, бодрящий вкус с имбирным оттенком.",
+    "quantity_available": 13,
+    "sales_trend": 2.9
+  },
+  {
+    "id": "121d56e4-dc5b-43c3-8658-d1a00f8cbf76",
+    "name": "Карамельно-соленый мокко",
+    "price": 45.53,
+    "min_stock": 8,
+    "vending_machine_id": "4daae871-71ac-44da-8b58-dcf1a2ae907a",
+    "description": "Имеет необычный вкус с оттенком морской соли.",
+    "quantity_available": 92,
+    "sales_trend": 8.15
+  },
+  {
+    "id": "b4f5fdc1-498b-4830-bb04-c3625a94d146",
+    "name": "Ванильный флет уайт",
+    "price": 179.3,
+    "min_stock": 18,
+    "vending_machine_id": "4daae871-71ac-44da-8b58-dcf1a2ae907a",
+    "description": "Имеет нежный вкус с ароматом ванили.",
+    "quantity_available": 49,
+    "sales_trend": 7.56
+  },
+  {
+    "id": "836b11ff-ec22-4433-8f72-11ce31d21bd7",
+    "name": "Ирисовый латте",
+    "price": 150.16,
+    "min_stock": 17,
+    "vending_machine_id": "a977e322-192c-4567-9f5f-36f504bfc13d",
+    "description": "Имеет сладкий вкус с карамельными нотками ириса.",
+    "quantity_available": 78,
+    "sales_trend": 7.23
+  },
+  {
+    "id": "e8c1eb57-f3f2-48ad-b65f-b3cb39617849",
+    "name": "Кофе по-венски",
+    "price": 181.28,
+    "min_stock": 20,
+    "vending_machine_id": "a977e322-192c-4567-9f5f-36f504bfc13d",
+    "description": "Имеет классический вкус с взбитыми сливками.",
+    "quantity_available": 95,
+    "sales_trend": 8.69
+  },
+  {
+    "id": "3f9de4b4-8188-4bd9-8a98-55c4b27af3a9",
+    "name": "Кофе с корицей",
+    "price": 79.48,
+    "min_stock": 13,
+    "vending_machine_id": "a977e322-192c-4567-9f5f-36f504bfc13d",
+    "description": "Ароматный кофейный напиток с уникальным вкусом.",
+    "quantity_available": 54,
+    "sales_trend": 3.37
+  },
+  {
+    "id": "f6ffc6f0-c513-449c-bcc7-66505087e4f6",
+    "name": "Кокосовый капучино",
+    "price": 32.59,
+    "min_stock": 7,
+    "vending_machine_id": "a977e322-192c-4567-9f5f-36f504bfc13d",
+    "description": "Имеет экзотический вкус с кокосовой сладостью.",
+    "quantity_available": 10,
+    "sales_trend": 4.24
+  },
+  {
+    "id": "140d8dfd-14d6-46bd-a8a0-845d54d3df3e",
+    "name": "Ягодный мокко",
+    "price": 95.79,
+    "min_stock": 16,
+    "vending_machine_id": "70f22c9f-de0a-41a9-9a53-cabf42688d47",
+    "description": "Имеет фруктовый оттенок с кисло-сладким вкусом ягод.",
+    "quantity_available": 59,
+    "sales_trend": 1.94
+  },
+  {
+    "id": "2c90df73-2310-4499-bd86-701ee38b0974",
+    "name": "Миндальный латте",
+    "price": 49.13,
+    "min_stock": 18,
+    "vending_machine_id": "70f22c9f-de0a-41a9-9a53-cabf42688d47",
+    "description": "Имеет вкус с нотками сладкого миндаля.",
+    "quantity_available": 41,
+    "sales_trend": 7.03
+  },
+  {
+    "id": "4b5016ea-81a5-4ba4-97c2-5ff98123bac3",
+    "name": "Имбирный кофе",
+    "price": 81.68,
+    "min_stock": 7,
+    "vending_machine_id": "70f22c9f-de0a-41a9-9a53-cabf42688d47",
+    "description": "Имеет острый, бодрящий вкус с имбирным оттенком.",
+    "quantity_available": 26,
+    "sales_trend": 7.39
+  },
+  {
+    "id": "069d1026-82b5-4365-8481-1b38fe50307c",
+    "name": "Трюфельный макиато",
+    "price": 105.2,
+    "min_stock": 7,
+    "vending_machine_id": "70f22c9f-de0a-41a9-9a53-cabf42688d47",
+    "description": "Имеет интенсивный вкус с нотками шоколадного трюфеля.",
+    "quantity_available": 29,
+    "sales_trend": 1.14
+  },
+  {
+    "id": "9c11131a-5957-42d6-bbac-a20f9bc18418",
+    "name": "Шафрановый раф",
+    "price": 131.32,
+    "min_stock": 16,
+    "vending_machine_id": "70f22c9f-de0a-41a9-9a53-cabf42688d47",
+    "description": "Имеет изысканный вкус с восточными нотками шафрана.",
+    "quantity_available": 11,
+    "sales_trend": 3.69
+  },
+  {
+    "id": "cca932b0-81f0-45a1-9af7-8fe57aa1873e",
+    "name": "Грушевый латте +",
+    "price": 161.27,
+    "min_stock": 17,
+    "vending_machine_id": "70f22c9f-de0a-41a9-9a53-cabf42688d47",
+    "description": "Имеет мягкий вкус с лёгкой фруктовой сладостью.",
+    "quantity_available": 72,
+    "sales_trend": 9.48
+  }
+]

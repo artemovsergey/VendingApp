@@ -38,10 +38,10 @@ export default defineConfig({
     })
   ],
   server: {
-    https: {
-      cert: "localhost.pem",
-      key: "localhost-key.pem",
-    },
+    // https: {
+    //   cert: "localhost.pem",
+    //   key: "localhost-key.pem",
+    // },
     host: '0.0.0.0',
     port: 3000,
   },

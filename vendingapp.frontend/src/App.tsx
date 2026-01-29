@@ -5,6 +5,7 @@ import { Login } from "./components/Login";
 import { Layout } from "./components/Layout";
 import { NotFound } from "./components/NotFound";
 import { ToastContainer } from "react-toastify";
+import { TA } from "./components/TA";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="monitoring" element={<Monitoring />} />
+            <Route path="ta" element={<TA />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

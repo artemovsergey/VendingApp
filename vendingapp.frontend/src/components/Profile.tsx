@@ -25,7 +25,7 @@ export const Profile = () => {
 
             {currentUser &&
 
-                <ul className="relative flex flex-col gap-1 p-1">
+                <ul className="relative flex flex-col gap-1 p-1 ">
                     <img className="bg-white hover:bg-orange-500 self-end rounded-full"
                         src="icons/angle-right.png"
                         alt=">"
